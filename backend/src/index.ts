@@ -5,6 +5,8 @@ import cors from "cors";
 import fs from "node:fs";
 import path from "node:path";
 
+import * as Sentry from "@sentry/node";
+
 import { clerkMiddleware } from "@clerk/express";
 import { clerkWebhookHandler } from "./webhooks/clerk";
 import { getEnv } from "./lib/env";
@@ -15,6 +17,7 @@ import meRouter from "./routes/meRouter";
 import streamRouter from "./routes/streamRouter";
 import chekoutRouter from "./routes/chekoutRouter";
 import { polarWebhookHandler } from "./webhooks/polar";
+import { sentryClerkUserMiddleware } from "./middleware/sentryClerkUser";
 
 const env = getEnv();
 const app = express();
@@ -33,11 +36,26 @@ app.post("/webhooks/polar", rawJson, (req, res) => {
 app.use(express.json());
 app.use(cors());
 app.use(clerkMiddleware());
+app.use(sentryClerkUserMiddleware);
 
 
 app.get("/health", (_req, res) => {
     res.json({ ok: true });
 });
+
+// sentry will be attached to the response object
+Sentry.setupExpressErrorHandler(app);
+
+app.use(
+    (_err: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+        const sentryId = (res as express.Response & { sentry?: string }).sentry;
+
+        res.status(500).json({
+            error: "Internal server error",
+            ...(sentryId !== undefined && { sentryId }),
+        });
+    },
+);
 
 app.use("/api/me", meRouter);
 app.use("/api/products", productRouter);
