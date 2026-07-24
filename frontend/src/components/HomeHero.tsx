@@ -1,17 +1,16 @@
 import { Link } from "react-router";
 import { ArrowRightIcon, SparklesIcon } from "lucide-react";
 
-  interface HomeHeroProps {
-    categories: string[];
-    loadingCategories: boolean;
-  }
+interface HomeHeroProps {
+  categories: string[];
+  loadingCategories: boolean;
+}
 
-
-export function HomeHero({ categories, loadingCategories }:HomeHeroProps) {
+export function HomeHero({ categories, loadingCategories }: HomeHeroProps) {
   return (
     <section className="relative overflow-hidden rounded-box border border-base-300 bg-linear-to-br from-base-100 via-base-100 to-blue-900/10 shadow-lg">
       <div
-        className="absolute right-0 top-0 h-64 w-64 translate-x-1/4 -translate-y-1/8 rounded-full bg-blue-900/20 blur-3xl"
+        className="absolute right-0 top-0 h-64 w-64 translate-x-1/4 -translate-y-1/8 rounded-full bg-blue-700/20 blur-3xl"
         aria-hidden
       />
 
@@ -19,7 +18,7 @@ export function HomeHero({ categories, loadingCategories }:HomeHeroProps) {
         <div className="text-left">
           <h1 className="text-3xl font-bold tracking-tight text-base-content md:text-4xl lg:text-5xl">
             Hardware &amp; workspace,{" "}
-            <span className="text-blue-900">ready to ship</span>
+            <span className="text-blue-700">ready to ship</span>
           </h1>
 
           <p className="mt-4 max-w-lg text-base leading-relaxed text-base-content/70">
@@ -29,7 +28,7 @@ export function HomeHero({ categories, loadingCategories }:HomeHeroProps) {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <a href="#catalog" className="btn bg-blue-900 gap-2 shadow-md">
+            <a href="#catalog" className="btn bg-blue-700 gap-2 shadow-md">
               Shop catalog
               <ArrowRightIcon className="size-4" aria-hidden />
             </a>
@@ -46,7 +45,7 @@ export function HomeHero({ categories, loadingCategories }:HomeHeroProps) {
               Categories
             </div>
 
-            <div className="stat-value text-2xl text-blue-900">
+            <div className="stat-value text-2xl text-blu00">
               {loadingCategories ? (
                 <span
                   className="skeleton inline-block h-8 w-10 rounded"
@@ -60,7 +59,7 @@ export function HomeHero({ categories, loadingCategories }:HomeHeroProps) {
             <div className="stat-desc text-xs">Curated groups</div>
           </div>
 
-          <div className="rounded-box border border-dashed border-blue-900/30 bg-blue-900/5 px-4 py-3">
+          <div className="rounded-box border border-dashed border-blue-700/30 bg-blue-700/5 px-4 py-3">
             <div className="flex items-center gap-2 text-sm font-medium text-base-content">
               <SparklesIcon className="size-4 text-blue-900" aria-hidden />
               Secure checkout · Priority support on paid orders

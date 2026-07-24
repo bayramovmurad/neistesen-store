@@ -2,7 +2,7 @@ import { CatalogProductCard } from "../components/CatalogProductCard";
 import { HomeHero } from "../components/HomeHero";
 import { PageError } from "../components/PageError";
 import { TrustStrip } from "../components/TrustStrip";
-import { useHomeCatalog} from "../hooks/useHomeCatalog";
+import { useHomeCatalog } from "../hooks/useHomeCatalog";
 import type { Product } from "../types/product";
 
 function HomePage() {
@@ -16,9 +16,6 @@ function HomePage() {
     loadingList,
     setCategory,
   } = useHomeCatalog();
-
-
-
 
   return (
     <div className="space-y-12">
@@ -38,7 +35,7 @@ function HomePage() {
           <div className="flex flex-wrap gap-2">
             <button
               type="button"
-              className={`btn btn-sm ${!categoryFilter ? "bg-blue-900" : "btn-ghost border border-base-300"}`}
+              className={`btn btn-sm ${!categoryFilter ? "bg-blue-700" : "btn-ghost border border-base-300"}`}
               onClick={() => setCategory("")}>
               All
             </button>
@@ -51,11 +48,11 @@ function HomePage() {
                     aria-hidden
                   />
                 ))
-              : categories.map((c:string) => (
+              : categories.map((c: string) => (
                   <button
                     key={c}
                     type="button"
-                    className={`btn btn-sm ${categoryFilter === c ? "bg-blue-900" : "btn-ghost border border-base-300"}`}
+                    className={`btn btn-sm ${categoryFilter === c ? "bg-blue-700" : "btn-ghost border border-base-300"}`}
                     onClick={() => setCategory(c)}>
                     {c}
                   </button>

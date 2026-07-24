@@ -7,7 +7,7 @@ export function SentryErrorFallback() {
         Something went wrong. The error was reported.
       </p>
 
-      <Link to="/" className="btn bg-blue-900 btn-sm mt-6">
+      <Link to="/" className="btn bg-blue-700 btn-sm mt-6">
         Back to shop
       </Link>
     </div>

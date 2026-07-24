@@ -9,11 +9,11 @@ interface CatalogProductCardProps {
   product: Product;
 }
 
-export function CatalogProductCard({ product}:CatalogProductCardProps) {
+export function CatalogProductCard({ product }: CatalogProductCardProps) {
   const addItem = useCart((s) => s.addItem);
 
   return (
-    <article className="card group h-full overflow-hidden border border-base-300 bg-base-100 shadow-md transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-xl">
+    <article className="card group h-full overflow-hidden border border-base-300 bg-base-100 shadow-md transition hover:-translate-y-0.5 hover:border-blue-700/40 hover:shadow-xl">
       <Link
         to={`/product/${product.slug}`}
         className="relative block overflow-hidden">
@@ -38,7 +38,7 @@ export function CatalogProductCard({ product}:CatalogProductCardProps) {
       <div className="card-body grow gap-3 p-5 text-left">
         <Link
           to={`/product/${product.slug}`}
-          className="card-title line-clamp-2 text-lg transition group-hover:text-blue-900">
+          className="card-title line-clamp-2 text-lg transition group-hover:text-blue-700">
           {product.name}
         </Link>
         <p className="line-clamp-3 text-sm leading-relaxed text-base-content/70">
@@ -50,8 +50,8 @@ export function CatalogProductCard({ product}:CatalogProductCardProps) {
           </span>
           <button
             type="button"
-            onClick={() => addItem(product.id)}
-            className="btn bg-blue-900 btn-sm gap-1 shadow">
+            onClick={() => addItem(product.id!)}
+            className="btn bg-blue-700 btn-sm gap-1 shadow">
             <PlusIcon className="size-4" aria-hidden />
             Add
           </button>

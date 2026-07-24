@@ -35,7 +35,7 @@ export function TrustStrip() {
         const IconCmp = icon;
         return (
           <div key={title} className="flex gap-3">
-            <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-blue-900/10 text-blue-900">
+            <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-blue-700/10 text-blue-700">
               <IconCmp className="size-5" aria-hidden />
             </div>
             <div>

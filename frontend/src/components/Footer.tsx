@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-2 font-semibold text-base-content">
-              <TruckIcon className="size-8 text-blue-900" aria-hidden />
+              <TruckIcon className="size-8 text-blue-700" aria-hidden />
               Northwind Supply
             </div>
             <p className="mt-3 text-sm leading-relaxed text-base-content/65">
@@ -52,7 +52,7 @@ export default function Footer() {
             <ul className="mt-3 space-y-2 text-sm text-base-content/70">
               <li className="flex items-start gap-2">
                 <HeadphonesIcon
-                  className="mt-0.5 size-5 shrink-0 text-blue-900"
+                  className="mt-0.5 size-5 shrink-0 text-blue-700"
                   aria-hidden
                 />
                 <span>

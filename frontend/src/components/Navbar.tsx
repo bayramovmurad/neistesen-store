@@ -36,7 +36,7 @@ const Navbar = () => {
           <Link
             to="/"
             className="btn btn-ghost gap-2 px-2 font-mono text-lg font-semibold uppercase tracking-wide md:text-xl">
-            <span className="flex size-10 items-center justify-center rounded-full bg-blue-900 p-1 text-blue-900">
+            <span className="flex size-10 items-center justify-center rounded-full bg-blue-700 p-1 text-blue-700">
               <StoreIcon className="size-7 text-white" aria-hidden />
             </span>
             <span className="leading-none">Neistesen</span>
@@ -70,7 +70,7 @@ const Navbar = () => {
             className="btn btn-ghost gap-2 font-medium indicator"
             aria-label={cartCount > 0 ? `Cart, ${cartCount} items` : "Cart"}>
             {cartCount > 0 ? (
-              <span className="indicator-item badge badge-sm badge-primary min-w-2 px-1.5 font-sans text-xs tabular-nums">
+              <span className="indicator-item badge badge-sm bg-blue-700 min-w-2 px-1.5 font-sans text-xs tabular-nums">
                 {cartCount > 99 ? "99+" : cartCount}
               </span>
             ) : null}
@@ -82,7 +82,7 @@ const Navbar = () => {
             <SignInButton mode="modal">
               <button
                 type="button"
-                className="btn bg-blue-900 btn-sm gap-1.5 px-3 shadow-md rounded-md">
+                className="btn bg-blue-700 btn-sm gap-1.5 px-3 shadow-md rounded-md">
                 <LogInIcon className="size-4 drop-shadow-sm " aria-hidden />
                 Sign in
               </button>
