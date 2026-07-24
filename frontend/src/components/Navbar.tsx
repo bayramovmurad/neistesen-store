@@ -24,7 +24,6 @@ const Navbar = () => {
 
   const role = meData?.user;
   console.log(role);
-  
 
   const cartCount = useCart((s) =>
     s.items.reduce((n, line) => n + line.quantity, 0),
@@ -37,7 +36,7 @@ const Navbar = () => {
           <Link
             to="/"
             className="btn btn-ghost gap-2 px-2 font-mono text-lg font-semibold uppercase tracking-wide md:text-xl">
-            <span className="flex size-10 items-center justify-center rounded-full bg-blue-900 p-1 text-primary">
+            <span className="flex size-10 items-center justify-center rounded-full bg-blue-900 p-1 text-blue-900">
               <StoreIcon className="size-7 text-white" aria-hidden />
             </span>
             <span className="leading-none">Neistesen</span>
