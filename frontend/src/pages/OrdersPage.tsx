@@ -81,7 +81,7 @@ function OrdersPage() {
                         <span
                           className={`badge badge-sm capitalize ${
                             o.status === "paid"
-                              ? "badge-success"
+                              ? "bg-blue-700"
                               : o.status === "pending"
                                 ? "badge-warning"
                                 : "badge-error"

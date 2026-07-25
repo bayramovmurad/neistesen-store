@@ -47,7 +47,7 @@ function OrderVideoPage() {
   if (!client || !call) {
     return (
       <div className="flex min-h-120 items-center justify-center rounded-box border border-base-300 bg-base-100">
-        <span className="loading loading-spinner loading-lg text-primary" />
+        <span className="loading loading-spinner loading-lg text-blue-700" />
       </div>
     );
   }

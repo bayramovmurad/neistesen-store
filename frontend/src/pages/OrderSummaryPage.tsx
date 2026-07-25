@@ -4,13 +4,13 @@ import { IK_PRESETS, imageKitOptimizedUrl } from "../lib/imagekitUrl";
 import { formatPrice } from "../utils/format";
 
 function OrderSummaryPage() {
-  const { order, items } = useOutletContext<{order:any, items: any[]}>();
+  const { order, items } = useOutletContext<{ order: any; items: any[] }>();
 
   return (
     <div className="overflow-hidden rounded-2xl border border-base-300 bg-base-100 shadow-md">
       <div className="border-b border-base-300 bg-base-200/40 px-5 py-4 sm:px-6">
         <h2 className="flex items-center gap-2 text-lg font-bold text-base-content">
-          <ListOrderedIcon className="size-5 text-primary" aria-hidden />
+          <ListOrderedIcon className="size-5 text-blue-700" aria-hidden />
           Line items
         </h2>
         <p className="mt-1 text-sm text-base-content/60">
@@ -20,7 +20,7 @@ function OrderSummaryPage() {
       </div>
 
       <ul className="divide-y divide-base-300">
-        {items.map((row:any) => (
+        {items.map((row: any) => (
           <li key={row.id} className="px-4 py-5 sm:px-6">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6 sm:justify-between">
               <div className="flex flex-1 gap-4">
@@ -90,7 +90,7 @@ function OrderSummaryPage() {
 
       <div className="flex items-center justify-between gap-4 border-t border-base-300 bg-base-200/50 px-5 py-5 sm:px-6">
         <span className="text-lg font-semibold text-base-content">Total</span>
-        <span className="text-2xl font-bold tabular-nums text-primary">
+        <span className="text-2xl font-bold tabular-nums text-blue-700">
           {formatPrice(order.totalCents, "usd")}
         </span>
       </div>

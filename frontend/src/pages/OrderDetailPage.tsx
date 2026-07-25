@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { formatOrderWhen, formatPrice } from "../utils/format";
 
-const tabClass = ({ isActive }:{isActive:boolean}) =>
+const tabClass = ({ isActive }: { isActive: boolean }) =>
   `tab gap-2 whitespace-nowrap ${isActive ? "tab-active" : ""}`;
 
 function OrderDetailPage() {
@@ -34,7 +34,7 @@ function OrderDetailPage() {
     <div className="space-y-8 text-left">
       <Link
         to="/orders"
-        className="btn btn-ghost btn-sm gap-2 px-0 text-base-content/70 hover:text-primary">
+        className="btn btn-ghost btn-sm gap-2 px-0 text-base-content/70 hover:text-blue-700">
         <ArrowLeftIcon className="size-4" aria-hidden />
         Back to orders
       </Link>
@@ -43,7 +43,7 @@ function OrderDetailPage() {
         <div className="bg-linear-to-br from-primary/12 via-base-100 to-base-200/90 px-5 py-6 sm:px-8 sm:py-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+              <p className="text-xs font-semibold uppercase tracking-wider text-blue-700">
                 Order details
               </p>
 
@@ -63,7 +63,7 @@ function OrderDetailPage() {
               <span
                 className={`badge badge-lg w-fit capitalize lg:ml-auto ${
                   paid
-                    ? "badge-success"
+                    ? "bg-blue-700"
                     : order.status === "pending"
                       ? "badge-warning"
                       : "badge-error"
@@ -95,7 +95,7 @@ function OrderDetailPage() {
 
       <div>
         <div className="flex items-center gap-2 border-b border-base-300 pb-3">
-          <HeadphonesIcon className="size-5 text-primary" aria-hidden />
+          <HeadphonesIcon className="size-5 text-blue-700" aria-hidden />
           <h2 className="text-sm font-semibold uppercase tracking-wide text-base-content">
             Customer support
           </h2>

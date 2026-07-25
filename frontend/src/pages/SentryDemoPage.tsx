@@ -22,7 +22,7 @@ function checkoutBreadcrumbs() {
   });
 }
 
-function applyDemoScope(scope:any, scenarioId:string) {
+function applyDemoScope(scope: any, scenarioId: string) {
   scope.setTag("demo.tutorial", "true");
   scope.setTag("demo.scenario", scenarioId);
 }
@@ -304,7 +304,7 @@ function sendErrorBatch() {
 export function SentryDemoPage() {
   const [lastAction, setLastAction] = useState<string | null>(null);
 
-  const run = useCallback((id:string, fn: () => void) => {
+  const run = useCallback((id: string, fn: () => void) => {
     fn();
     setLastAction(id);
   }, []);
@@ -318,7 +318,7 @@ export function SentryDemoPage() {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <p className="text-sm font-medium uppercase tracking-wide text-primary">
+      <p className="text-sm font-medium uppercase tracking-wide text-blue-700">
         Observability
       </p>
       <h1 className="mt-1 text-3xl font-semibold tracking-tight text-base-content">
@@ -444,7 +444,7 @@ export function SentryDemoPage() {
             </div>
             <button
               type="button"
-              className="btn btn-primary btn-sm shrink-0"
+              className="btn btn-blue-700 btn-sm shrink-0"
               onClick={() => run("batch", sendErrorBatch)}>
               Send batch
             </button>

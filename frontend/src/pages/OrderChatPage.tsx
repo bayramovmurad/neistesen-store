@@ -36,7 +36,7 @@ function OrderChatPage() {
       <div className="card border border-base-300 bg-base-100 shadow-sm">
         <div className="card-body flex-row flex-wrap items-start gap-4">
           <div className="avatar placeholder">
-            <div className="w-12 rounded-box bg-primary/20 text-primary flex items-center justify-center">
+            <div className="w-12 rounded-box bg-primary/20 text-blue-700 flex items-center justify-center">
               <HeadphonesIcon className="size-6" aria-hidden />
             </div>
           </div>

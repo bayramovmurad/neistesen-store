@@ -9,9 +9,9 @@ function useOrderVideoPage() {
     const { id } = useParams();
     const { getToken, isSignedIn } = useAuth();
 
-    const [client, setClient] = useState(null);
-    const [call, setCall] = useState(null);
-    const [error, setError] = useState(null);
+    const [client, setClient] = useState<any | null>(null);
+    const [call, setCall] = useState<any | null>(null);
+    const [error, setError] = useState<string | null>(null);
 
     const {
         data,
@@ -29,8 +29,8 @@ function useOrderVideoPage() {
     useEffect(() => {
         if (!paid || !id || !isSignedIn) return undefined;
 
-        let videoClient;
-        let activeCall;
+        let videoClient: any;
+        let activeCall: any;
 
         async function connectOrderVideo() {
             const token = await apiFetch("/api/stream/token", {

@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="flex-1">
           <Link
             to="/"
-            className="btn btn-ghost gap-2 px-2 font-mono text-lg font-semibold uppercase tracking-wide md:text-xl">
+            className="btn btn-ghost sm:gap-2 gap-0 px-1.5 font-mono text-lg font-semibold uppercase tracking-wide md:text-xl">
             <span className="flex size-10 items-center justify-center rounded-full bg-blue-700 p-1 text-blue-700">
               <StoreIcon className="size-7 text-white" aria-hidden />
             </span>
@@ -43,7 +43,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <nav className="flex items-center gap-1 md:gap-1.5">
+        <nav className="flex items-center gap-0 md:gap-1.5">
           <Link to="/" className="btn btn-ghost gap-2 font-medium">
             <ShoppingBagIcon className="size-6 opacity-90" aria-hidden />
             <span className="hidden sm:inline">Shop</span>
