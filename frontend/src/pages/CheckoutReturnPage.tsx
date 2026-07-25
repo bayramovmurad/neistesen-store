@@ -20,7 +20,7 @@ function CheckoutReturnPage() {
   return (
     <div className="mx-auto max-w-lg text-center">
       <div className="avatar placeholder mx-auto mb-4">
-        <div className="w-16 rounded-full bg-success/20 text-success flex items-center justify-center">
+        <div className="w-16 rounded-full bg-success/20 text-blue-700 flex items-center justify-center">
           <CheckCircle2Icon className="size-10" aria-hidden />
         </div>
       </div>
@@ -43,7 +43,7 @@ function CheckoutReturnPage() {
         </p>
       ) : null}
 
-      <Link to="/orders" className="btn btn-primary mt-8 gap-2">
+      <Link to="/orders" className="btn bg-blue-700 mt-8 gap-2">
         <PackageIcon className="size-4" aria-hidden />
         View orders
       </Link>

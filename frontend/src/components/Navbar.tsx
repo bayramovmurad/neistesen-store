@@ -97,7 +97,7 @@ const Navbar = () => {
                 }}
               />
               {role === "support" || role === "admin" ? (
-                <span className="badge badge-primary badge-sm hidden capitalize md:inline-flex">
+                <span className="badge bg-blue-700 badge-sm hidden capitalize md:inline-flex">
                   {role}
                 </span>
               ) : null}

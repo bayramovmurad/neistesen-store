@@ -31,7 +31,7 @@ function OrdersPage() {
   return (
     <div className="text-left">
       <h1 className="mb-2 flex items-center gap-2 text-3xl font-bold text-base-content">
-        <PackageIcon className="size-8 text-primary" aria-hidden />
+        <PackageIcon className="size-8 text-blue-700" aria-hidden />
         {staff ? "Orders" : "Your orders"}
       </h1>
 
@@ -44,16 +44,16 @@ function OrdersPage() {
       {orders.length === 0 ? (
         <p className="text-base-content/70">
           No orders yet.{" "}
-          <Link to="/" className="link link-primary">
+          <Link to="/" className="link text-blue-700">
             Browse the shop
           </Link>
         </p>
       ) : (
         <ul className="space-y-4">
-          {orders.map((o:any) => {
+          {orders.map((o: any) => {
             const previewItems = o.previewItems ?? [];
             const totalUnits = previewItems.reduce(
-              (sum:number, row:{quantity:number}) => sum + row.quantity,
+              (sum: number, row: { quantity: number }) => sum + row.quantity,
               0,
             );
             const lineCount = previewItems.length;
@@ -68,7 +68,7 @@ function OrdersPage() {
               <li key={o.id}>
                 <Link
                   to={`/orders/${o.id}`}
-                  className="group card border border-base-300 bg-base-100 shadow-sm transition hover:border-primary/45 hover:shadow-md">
+                  className="group card border border-base-300 bg-base-100 shadow-sm transition hover:border-blue-700/45 hover:shadow-md">
                   <div className="card-body flex-row flex-wrap items-center gap-4 py-5 sm:gap-5">
                     <OrderPreview items={previewItems} />
 
@@ -109,7 +109,7 @@ function OrdersPage() {
                         </p>
                       </div>
                       <ChevronRightIcon
-                        className="size-5 shrink-0 text-base-content/40 transition group-hover:translate-x-0.5 group-hover:text-primary"
+                        className="size-5 shrink-0 text-base-content/40 transition group-hover:translate-x-0.5 group-hover:text-blue-700"
                         aria-hidden
                       />
                     </div>

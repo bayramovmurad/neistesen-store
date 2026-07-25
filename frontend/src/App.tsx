@@ -6,6 +6,11 @@ import { useAuth } from "@clerk/react";
 import CartPage from "./pages/CartPages";
 import OrdersPage from "./pages/OrdersPage";
 import CheckoutReturnPage from "./pages/CheckoutReturnPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
+import OrderSummaryPage from "./pages/OrderSummaryPage";
+import { SentryDemoPage } from "./pages/SentryDemoPage";
+import OrderDetailPage from "./pages/OrderDetailPage";
+import OrderChatPage from "./pages/OrderChatPage";
 
 function App() {
   const { isLoaded, isSignedIn } = useAuth();
@@ -22,6 +27,14 @@ function App() {
           element={isSignedIn ? <OrdersPage /> : <Navigate to={"/"} replace />}
         />
         <Route path="/checkout/return" element={<CheckoutReturnPage />} />
+        <Route path="/product/:slug" element={<ProductDetailPage />} />
+
+         <Route path="/demo-sentry" element={<SentryDemoPage />} />
+
+        <Route path="/orders/:id" element={<OrderDetailPage />}>
+          <Route index element={<OrderSummaryPage />} />
+          <Route path="chat" element={<OrderChatPage />} />
+        </Route>
       </Routes>
     </Layout>
   );
