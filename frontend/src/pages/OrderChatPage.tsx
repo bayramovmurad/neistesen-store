@@ -53,7 +53,7 @@ function OrderChatPage() {
               <div className="mt-3 flex flex-wrap items-center gap-2">
                 <button
                   type="button"
-                  className="btn btn-secondary btn-sm gap-2"
+                  className="btn bg-blue-700 btn-sm gap-2"
                   disabled={inviteMutation.isPending}
                   onClick={() => inviteMutation.mutate()}>
                   {inviteMutation.isPending ? (

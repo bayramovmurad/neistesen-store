@@ -64,7 +64,7 @@ function OrderVideoPage() {
       <div className="card border border-base-300 bg-base-100 shadow-sm">
         <div className="card-body flex-row items-start gap-4">
           <div className="avatar placeholder">
-            <div className="w-12 rounded-box bg-secondary/20 text-secondary flex items-center justify-center">
+            <div className="w-12 rounded-box bg-secondary/20 text-blue-700 flex items-center justify-center">
               <VideoIcon className="size-6" aria-hidden />
             </div>
           </div>

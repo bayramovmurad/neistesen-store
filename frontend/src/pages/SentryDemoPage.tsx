@@ -444,7 +444,7 @@ export function SentryDemoPage() {
             </div>
             <button
               type="button"
-              className="btn btn-blue-700 btn-sm shrink-0"
+              className="btn bg-blue-700 btn-sm shrink-0"
               onClick={() => run("batch", sendErrorBatch)}>
               Send batch
             </button>

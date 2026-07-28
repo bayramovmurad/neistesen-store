@@ -58,7 +58,7 @@ const Navbar = () => {
             {role === "admin" ? (
               <Link
                 to="/admin"
-                className="btn btn-ghost gap-2 font-medium text-secondary">
+                className="btn btn-ghost gap-2 font-medium text-blue-700">
                 <SettingsIcon className="size-6" aria-hidden />
                 <span className="hidden sm:inline">Admin</span>
               </Link>
